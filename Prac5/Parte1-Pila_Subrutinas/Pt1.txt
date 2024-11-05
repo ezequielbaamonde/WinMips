@@ -1,0 +1,32 @@
+a) ¿Qué hace el programa? ¿Cómo está estructurado el código del mismo?
+b) ¿Qué acciones produce la instrucción jal? ¿Y la instrucción jr?
+c) ¿Qué valor se almacena en el registro $ra? ¿Qué función cumplen los registros $a0 y $a1? ¿Y el
+registro $v0? ¿Qué valores posibles puede recibir en $a0 y $a1 la subrutina potencia?
+d) Supongamos que el WinMIPS no posee la instrucción dmul ¿Qué sucede si la subrutina potencia
+necesita invocar a otra subrutina para realizar la multiplicación en lugar de usar la instrucción dmul?
+¿Cómo sabe cada una de las subrutinas a que dirección de memoria debe retornar?
+e) Escriba un programa que utilice potencia. En el programa principal se solicitará el ingreso de la base y
+del exponente (ambos enteros) y se deberá utilizar la subrutina potencia para calcular el resultado
+pedido. Muestre el resultado numérico de la operación en pantalla.
+f) Escriba un programa que lea un exponente x y calcule 2^x + 3^x utilizando dos llamadas a potencia.
+Muestre en pantalla el resultado. ¿Funciona correctamente? Si no lo hace, revise su implementación
+del programa ¿Qué sucede cuando realiza una segunda llamada a potencia? Pista: Como caso de prueba,
+intente calcular 23+3³ = 8+27 = 35..
+
+RESPUESTAS:
+
+a) El programa realiza la potencia de de 5^4. Le pasa a la subrutina "potencia" los parametros $a0 (base) y $a1 (exponente)
+   En el bucle almacena en $v0 el valor 1 como inicio. Luego evalua que $a1 no sea sero ya que se ira decrementando la cant veces
+   que tenga asignada como exponente (4). La multiplicación en la primer vuelta sera (1*5), en la segunda (5*5), en la tercera
+   (25*5), en la cuarta y ultima (125*5).
+    Este resultado se almacenara como retorno en $v0. Al ser cero $a1, saltara a la etiqueta terminar donde retorna al programa 
+	principal con JR.
+	
+b) JAL llama a la subrutina y JR retorna al programa principal desde la dirección del llamado.
+
+c) En el registro $ra se almacenara la sig direccion del llamado a la subrutina del programa principal. En este caso seria la
+   dirección 0x000B
+   
+d) Se sobreescribiria el valor de JR y no se podria volver al programa principal. Antes de llamar a la otra subrutina deberia guardarse
+   el valor de $RA para que, cuando se vuelva a la rutina potencia, reescribirlo nuevamente.
+   
