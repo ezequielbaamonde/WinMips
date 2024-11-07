@@ -2,6 +2,8 @@
 #número combinatorio (también llamado coeficiente binomial) comb(m,n) = m! / (n! * (n-m)!).
 #Asumir que n > m.
 
+
+#Revisar BUCLE INFINITO
 .data
  n: .word 4
  m: .word 2
