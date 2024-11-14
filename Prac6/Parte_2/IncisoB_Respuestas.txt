@@ -1,0 +1,7 @@
+Las dependencias de datos por lectura que me parecen que causarán atascos RAW son:
+	> El programa 2 tiene dos atasco raw al comparar $t1 con $t2, donde anteriormente $t2 se está leyendo.
+	
+	> El programa 3 pareciera tener un atasco raw en la linea 6 donde el salto depende del la linea 5. En este caso es asi:
+	  4 atascos raw porque en cada iteracion del loop, menos la ultima, se atasca en la comparación
+	  
+	> El programa 4 pareciera tener  un atasco raw en la linea 4 por la linea 3 (que lee de memoria) y espera a obtener el valor
