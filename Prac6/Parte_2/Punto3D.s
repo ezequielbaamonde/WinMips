@@ -5,9 +5,8 @@
 #  programa con un lazo?
 
 
-# ---> La cantidad de instrucciones son 13 por lo siguiente: son 3 iteraciones, por ende 2 veces que se
-# ejecuta el loop nuevamente con 3 instrucciones. La ultima no se ejecuta.
-# Cantidad de instrucciones de un programa con lazo:= N instrucciones*(iteraciones-1)
+# ---> La cantidad de instrucciones son 13 porque son las que se ejecutaron, no las que tiene el programa.
+# En programas más simples la cant instrucciones coinciden con la cant instrucciones que se ejecutan
 
 
 .data
