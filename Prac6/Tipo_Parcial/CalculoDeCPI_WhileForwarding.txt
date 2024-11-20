@@ -1,0 +1,12 @@
+El siguiente programa busca determinar si el número num se encuentra dentro del vector tabla.
+A. Calcular manualmente el número de ciclos, CPI, RAWs y BTS/BMS, asumiendo forwarding activado y BTB
+   desactivado
+   ---> BMS = 0 | BTS = 4 | RAW = 8 | CICLOS = (24+4+4+8) = 40 | CPI = 40 / 24 =  1.66
+   
+B. Idem, asumiendo BTB activado.
+   ---> BMS = 4 | BTS = 6 | RAW = 8 | CICLOS = (24+4+4+6+8) = 46 | CPI = 46 / 24 =  1.91
+   ---> Duda con bms y bts... Según 
+
+C. Modificar el programa para que con DS activado funcione correctamente y no ejecute instrucciones
+de más
+   ---> Modificamos el incremento en el desplazamiento por debajo del salto al LOOP.
