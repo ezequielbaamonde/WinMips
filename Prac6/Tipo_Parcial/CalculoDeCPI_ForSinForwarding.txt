@@ -1,0 +1,14 @@
+3) Cálculo de CPI con lazo tipo for y sin forwarding
+
+El siguiente programa multiplica por 2 los valores del vector datos mediante un desplazamiento a la
+izquierda (dsll).
+
+A. Calcular manualmente el número de ciclos, CPI, RAWs y BTS/BMS, asumiendo forwarding
+desactivado, BTB/DS desactivados.
+
+---> CICLOS = (51+4+25+7) = 87 ciclos | CPI= (51+4+25+7)/51= 1.705 | RAWs= 25 | BTS= 7  | BMS= 0
+
+B. Modificar el programa para funcionar correctamente con DS. Calcular manualmente el número de
+ciclos, CPI, RAWs y BTS/BMS, asumiendo forwarding desactivado y DS activado.
+
+---> CICLOS = (51+4+39) =  94 ciclos | CPI= (51+4+39)/51 = 1.843 | RAWs= 39 | BTS= 0  | BMS= 0
