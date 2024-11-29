@@ -12,3 +12,8 @@
 	   daddi $t0, $t0, 8   
 	   bnez $t1, loop
 	   halt
+	   
+#Sin FORWARDING:
+#	-> 1 BTS
+#	-> 3 RAW
+#	-> CPI: 1,615

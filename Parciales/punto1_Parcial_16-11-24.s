@@ -10,3 +10,4 @@
 	   daddi $t2, $t2, -1
 	   bnez $t2, loop
 	   halt
+	   
